@@ -8,10 +8,10 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AddObject"):InvokeServer(unpack(args))
 end
 -- Remove
-function Remove(Shape, Path)
+function Remove(Path)
 	local args = {
 	{
-		Instance.new(Shape, Path)
+		Path
 	}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DeleteObject"):InvokeServer(unpack(args))
