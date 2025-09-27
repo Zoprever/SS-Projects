@@ -32,8 +32,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("MoveOb
 end
 -- Get Object --
 -- Variables
-local Storage = game.Workspace.Obbies[Player.Name].
-
+local Storage = game.Workspace.Obbies[Player.Name].Items
 -- Find Object With No Attributes
 function FOWNA()
     for _, obj in ipairs(Storage:GetChildren()) do
