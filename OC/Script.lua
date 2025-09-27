@@ -54,3 +54,4 @@ function FOWAA(Value)
     end
     return nil
 end
+local hello = false
