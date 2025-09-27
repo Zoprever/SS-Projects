@@ -33,19 +33,22 @@ end
 -- Get Object --
 -- Variables
 local Storage = game.Workspace.Obbies.SAREU_DX.Items.Parts
--- Find Object With No Attributes
+-- Find Object With No Attribute
 function FOWNA()
     for _, obj in ipairs(Storage:GetChildren()) do
-        if next(obj:GetAttributes()) == nil then
+        if obj:GetAttribute(Object) == nil then
             return obj
         end
     end
     return nil
 end
+function AddTag(Path,Tag)
+	Path:SetAttribute("Object", Tag)
+end
 -- Find Object With A Attribute
-function FOWAA(Attribute, Value)
+function FOWAA(Value)
     for _, obj in ipairs(Storage:GetChildren()) do
-        if obj:GetAttribute(Attribute) == Value then
+        if obj:GetAttribute(Object) == Value then
             return obj
         end
     end
