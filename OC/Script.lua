@@ -38,7 +38,7 @@ end
 -- Find Object With No Attribute
 function FOWNA()
     for _, obj in ipairs(Storage:GetChildren()) do
-        if obj:GetAttribute(Object) == nil then
+        if obj:GetAttribute("Object") == nil then
             return obj
         end
     end
@@ -49,7 +49,7 @@ end
 -- Find Object With A Attribute
 function FOWAA(Value)
     for _, obj in ipairs(Storage:GetChildren()) do
-        if obj:GetAttribute(Object) == Value then
+        if obj:GetAttribute("Object") == Value then
             return obj
         end
     end
