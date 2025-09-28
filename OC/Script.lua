@@ -1,3 +1,7 @@
+-- Variables
+local Events = game:GetService("ReplicatedStorage"):WaitForChild("Events")
+local Player = game:GetService("Players").LocalPlayer
+local Storage = game.Workspace.Obbies[Player.Name]
 -- Object's Functions --
 -- Add
 function Add(Shape, Cframe)
@@ -5,17 +9,16 @@ local args = {
 	Shape,
 	Cframe
 }
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AddObject"):InvokeServer(unpack(args))
+Events:WaitForChild("AddObject"):InvokeServer(unpack(args))
 end
 -- Remove
 function Remove(Path)
-	print("Removing " .. Path.Name .. " On " .. Path)
 	local args = {
 	{
 		Path
 	}
 }
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DeleteObject"):InvokeServer(unpack(args))
+Events:WaitForChild("DeleteObject"):InvokeServer(unpack(args))
 end
 -- Move
 function Move(Path, Cframe, Size)
@@ -28,11 +31,10 @@ local args = {
 		}
 	}
 }
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("MoveObject"):InvokeServer(unpack(args))
+Events:WaitForChild("MoveObject"):InvokeServer(unpack(args))
 end
 -- Get Object --
--- Variables
-local Storage = game.Workspace.Obbies.SAREU_DX.Items.Parts
+-- Variables --
 -- Find Object With No Attribute
 function FOWNA()
     for _, obj in ipairs(Storage:GetChildren()) do
@@ -54,4 +56,3 @@ function FOWAA(Value)
     end
     return nil
 end
-local hello = false
