@@ -40,7 +40,6 @@ function FOWNA()
     for _, obj in ipairs(Storage:GetChildren()) do
         if obj:GetAttribute(Object) == nil then
             return obj
-			break
         end
     end
 end
