@@ -1,7 +1,7 @@
 -- Variables
 local Events = game:GetService("ReplicatedStorage"):WaitForChild("Events")
 local Player = game:GetService("Players").LocalPlayer
-local Storage = game.Workspace.Obbies[Player.Name]
+local Storage = game.Workspace.Obbies[Player.Name].Items.Parts
 -- Object's Functions --
 -- Add
 function Add(Shape, Cframe)
